@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.kernix.progresshud"
+    version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>ProgressHUD</name>
+  <description>Phonegap ProgressHUD plugin</description>
+  <author>Pierre-Emmanuel Bois</author>
+  <email>pebois@kernix.com</email>
+  <license>Apache 2.0 License</license>
+  <js-module src="www/progresshud.js" name="ProgressHUD">
+    <clobbers target="ProgressHUD" />
+  </js-module>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ProgressHUD">
+        <param name="ios-package" value="ProgressHUD"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/ProgressHUD.h" />
+    <source-file src="src/ios/ProgressHUD.m" />
+    <header-file src="src/ios/MBProgressHUD.h" />
+    <source-file src="src/ios/MBProgressHUD.m" />
+  </platform>
+</plugin>
