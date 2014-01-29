@@ -10,12 +10,12 @@ Phonegap ProgressHUD plugin
 ## Using the plugin ##
 
 ### show ###
-```
+```js
 ProgressHUD.show();
 ```
 
 ### hide ###
-```
+```js
 ProgressHUD.hide();
 ```
 
