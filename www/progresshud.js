@@ -6,7 +6,7 @@
 //  MIT Licensed
 
 var ProgressHUD = {
-    show: function () {
+    show: function ( message ) {
     	var _message = ( message || 'Loading/Chargement' );
         cordova.exec(function () { }, function () { }, "ProgressHUD", "show", [ _message ]);
     },
