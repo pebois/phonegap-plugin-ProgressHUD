@@ -7,7 +7,7 @@
 
 var ProgressHUD = {
     show: function ( message ) {
-    	var _message = ( message || 'Loading/Chargement' );
+    	var _message = ( message || 'Chargement' );
         cordova.exec(function () { }, function () { }, "ProgressHUD", "show", [ _message ]);
     },
     hide: function () {
