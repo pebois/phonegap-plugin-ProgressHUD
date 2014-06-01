@@ -15,10 +15,12 @@
 
 - (void)show:(CDVInvokedUrlCommand*)command
 {
+	NSString* message = [command argumentAtIndex:0];
+
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
 	self.progressHUD.mode = MBProgressHUDModeIndeterminate;
-    self.progressHUD.labelText = @"Chargement";
+    self.progressHUD.labelText = message;
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }

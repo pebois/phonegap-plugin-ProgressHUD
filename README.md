@@ -11,7 +11,7 @@ Phonegap ProgressHUD plugin
 
 ### show ###
 ```js
-ProgressHUD.show();
+ProgressHUD.show( message );
 ```
 
 ### hide ###
